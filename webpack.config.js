@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
         filename: "[name].js",
+        publicPath: "/build/"
     },
     module: {
         rules: [
@@ -29,7 +30,13 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|ico|gif)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
         ]
     },
     plugins: [
