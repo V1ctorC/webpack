@@ -1171,6 +1171,11 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
+jquery@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 json-loader@^0.5.4:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/json-loader/-/json-loader-0.5.7.tgz#dca14a70235ff82f0ac9a3abeb60d337a365185d"
@@ -2205,6 +2210,11 @@ supports-color@^4.2.1:
   integrity sha1-vnoN5ITexcXN34s9WRJQRJEvY1s=
   dependencies:
     has-flag "^2.0.0"
+
+sweetalert2@6.6.6:
+  version "6.6.6"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-6.6.6.tgz#3630279d98f04fb8b89f2e8b098fc42f03bcb555"
+  integrity sha1-NjAnnZjwT7i4ny6LCY/ELwO8tVU=
 
 tapable@^0.2.7:
   version "0.2.9"
