@@ -6,6 +6,9 @@
   "author": "Ryan Weaver <ryan@thatsquality.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-env": "^1.7.0",
     "bootstrap": "3",
     "jquery": "^3.4.1",
     "sweetalert2": "6.6.6",
