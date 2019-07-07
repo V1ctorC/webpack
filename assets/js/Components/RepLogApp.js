@@ -8,13 +8,15 @@ require('sweetalert2/dist/sweetalert2.css');
 let HelperInstances = new WeakMap();
 
 class RepLogApp {
-    constructor($wrapper) {
+    constructor($wrapper, initialRepLogs) {
         this.$wrapper = $wrapper;
         this.repLogs = [];
 
         HelperInstances.set(this, new Helper(this.repLogs));
-
-        this.loadRepLogs();
+        
+        for (let repLog of initialRepLogs){
+            this._addRow(repLog);
+        }
 
         this.$wrapper.on(
             'click',
@@ -42,15 +44,6 @@ class RepLogApp {
         }
     }
 
-    loadRepLogs() {
-        $.ajax({
-            url: Routing.generate('rep_log_list'),
-        }).then(data => {
-            for (let repLog of data.items) {
-                this._addRow(repLog);
-            }
-        })
-    }
 
     updateTotalWeightLifted() {
         this.$wrapper.find('.js-total-weight').html(
