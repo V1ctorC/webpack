@@ -103,10 +103,11 @@ module.exports = {
         ]),
 
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-            minChunks: function (module) {
-                return module.context && module.context.indexOf("node_modules") !== -1;
-            }
+            name: [
+                'layout',
+                'manifest',
+            ],
+            minChunks: Infinity
         }),
     ],
     devtool: "inline-source-map"
