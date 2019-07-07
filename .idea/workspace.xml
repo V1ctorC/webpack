@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ba43f91-4e69-4b32-8c76-634c1809078c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/lift/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/lift/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/Components/RepLogApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/Components/RepLogApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/rep_log.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/rep_log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/LiftController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/LiftController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,16 +27,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/js/Components/RepLogApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="126">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/rep_log.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
@@ -108,10 +105,11 @@
         <option value="$PROJECT_DIR$/assets/css/main.scss" />
         <option value="$PROJECT_DIR$/assets/css/_bootstrap.scss" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/assets/js/Components/RepLogApp.js" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/LiftController.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/lift/index.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/rep_log.js" />
+        <option value="$PROJECT_DIR$/assets/js/Components/Routing.js" />
+        <option value="$PROJECT_DIR$/assets/js/Components/RepLogApp.js" />
       </list>
     </option>
   </component>
@@ -348,21 +346,21 @@
       <updated>1560694835247</updated>
       <workItem from="1560694838428" duration="9207000" />
       <workItem from="1560877437571" duration="259000" />
-      <workItem from="1562493651376" duration="7794000" />
+      <workItem from="1562493651376" duration="8284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17260000" />
+    <option name="totallyTimeSpent" value="17750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25767368" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32913166" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32913166" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -580,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/Components/RepLogApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/lift/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -598,6 +589,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/Components/Routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/Components/RepLogApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
         </state>
       </provider>
     </entry>
