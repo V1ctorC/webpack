@@ -1,3 +1,3 @@
 // TEMPORAIRE
 
-module.exports = window.Routing;
+export default window.Routing;
