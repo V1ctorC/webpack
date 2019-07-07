@@ -1,11 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
-        rep_log: './web/assets/js/rep_log.js',
-        login: './web/assets/js/login.js',
-        layout: './web/assets/js/layout.js',
+        rep_log: './assets/js/rep_log.js',
+        login: './assets/js/login.js',
+        layout: './assets/js/layout.js',
     },
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
@@ -59,6 +60,11 @@ module.exports = {
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
-        })
+        }),
+
+        new CopyPlugin([
+            //Copies to outpout/static
+            {from: './assets/static', to: 'static'}
+        ]),
     ]
 };
