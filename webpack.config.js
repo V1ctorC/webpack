@@ -2,9 +2,9 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const useDevServer = true;
+const useDevServer = false;
 const publicPath = useDevServer ? 'http://localhost:8080/build/' : '/build/';
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const styleLoader =  {
     loader: 'style-loader',
@@ -56,19 +56,23 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    styleLoader,
-                    cssLoader
-                ]
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        cssLoader,
+                    ],
+                    fallback: styleLoader
+                })
             },
             {
                 test: /\.scss$/,
-                use: [
-                    styleLoader,
-                    cssLoader,
-                    resolveUrlLoader,
-                    sassLoader,
-                ]
+                use: ExtractTextPlugin.extract({
+                    use: [
+                        cssLoader,
+                        resolveUrlLoader,
+                        sassLoader
+                    ],
+                    fallback: styleLoader
+                })
             },
             {
                 test: /\.(png|svg|jpg|jpeg|ico|gif)$/,
@@ -113,6 +117,8 @@ module.exports = {
             ],
             minChunks: Infinity
         }),
+
+        new ExtractTextPlugin('[name].css'),
     ],
     devtool: "inline-source-map",
     devServer: {
