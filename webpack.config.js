@@ -2,6 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
+const useDevServer = true;
+const publicPath = useDevServer ? 'http://localhost:8080/build/' : '/build/';
+
+
 const styleLoader =  {
     loader: 'style-loader',
     options: {
@@ -36,7 +40,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
         filename: "[name].js",
-        publicPath: "/build/"
+        publicPath: publicPath,
     },
     module: {
         rules: [
@@ -113,5 +117,6 @@ module.exports = {
     devtool: "inline-source-map",
     devServer: {
         contentBase: './web',
+        headers: { 'Access-Control-Allow-Origin': '*' },
     }
 };
