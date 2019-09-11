@@ -6,6 +6,7 @@ const useDevServer = false;
 const publicPath = useDevServer ? 'http://localhost:8080/build/' : '/build/';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 const styleLoader =  {
     loader: 'style-loader',
     options: {
@@ -31,7 +32,7 @@ const resolveUrlLoader =  {
     }
 };
 
-module.exports = {
+const webpackConfig = {
     entry: {
         rep_log: './assets/js/rep_log.js',
         login: './assets/js/login.js',
@@ -126,3 +127,12 @@ module.exports = {
         headers: { 'Access-Control-Allow-Origin': '*' },
     }
 };
+
+if (process.env.NODE_ENV === 'production')
+{
+    webpackConfig.plugins.push(
+        new webpack.optimize.UglifyJsPlugin(),
+    )
+}
+
+module.exports = webpackConfig;
