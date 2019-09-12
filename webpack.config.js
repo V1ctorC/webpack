@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const useDevServer = false;
 const useVersioning = true;
@@ -126,6 +127,11 @@ const webpackConfig = {
         new ExtractTextPlugin(
             useVersioning ? "[name].[contenthash:6].css" : "[name].css",
         ),
+
+        new ManifestPlugin({
+            writeToFileEmit: true,
+            basePath: 'build/'
+        }),
     ],
     devtool: useSourcemaps ? "inline-source-map" : false,
     devServer: {
