@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const WebpackChunkHash = require('webpack-chunk-hash');
 
 const useDevServer = false;
 const useVersioning = true;
@@ -45,7 +46,7 @@ const webpackConfig = {
     },
     output: {
         path: path.resolve(__dirname, 'web', 'build'),
-        filename: useVersioning ? "[name].[hash:6].js" : "[name].js",
+        filename: useVersioning ? "[name].[chunkhash:6].js" : "[name].js",
         publicPath: publicPath,
     },
     module: {
@@ -132,6 +133,11 @@ const webpackConfig = {
             writeToFileEmit: true,
             basePath: 'build/'
         }),
+
+        new WebpackChunkHash(),
+
+        isProduction ? new webpack.HashedModuleIdsPlugin() : new webpack.NamedModulesPlugin(),
+
     ],
     devtool: useSourcemaps ? "inline-source-map" : false,
     devServer: {
